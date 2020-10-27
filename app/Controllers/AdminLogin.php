@@ -50,7 +50,7 @@ class AdminLogin extends BaseController
         } else {
             $_SESSION['logonUser'] = 'aktif';
             $_SESSION['username'] = $userData[0]['name'];
-            return redirect()->to('/admin/index',);
+            return redirect()->to('/Admin',);
         }
     }
 
