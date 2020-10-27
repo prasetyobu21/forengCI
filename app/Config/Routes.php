@@ -33,12 +33,13 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/booth/(:any)', 'Booth::index/$1');
-$routes->get('/admin', 'AdminLogin::index');
-$routes->post('/adminDashboard', 'Admin::index');
+// $routes->post('/admin/(:any)', 'Admin::index');
+$routes->get('/admin/(:segment)', 'Admin::index');
+// $routes->post('/adminDashboard', 'Admin::index');
 $routes->get('/admin/admin-input', 'Admin::input');
 $routes->get('/admin/edit/(:segment)', 'Admin::edit/$1');
 $routes->delete('/admin/(:any)', 'Admin::delete/$1');
-$routes->get('/adminDashboard/(:segment)', 'Admin::detail/$1');
+$routes->get('/admin/adminDashboard/(:any)', 'Admin::detail/$1');
 $routes->get('/boothb', 'Booth::boothB');
 $routes->get('/boothw', 'Booth::boothW');
 $routes->post('/sendChat', 'ChatSystem::sendChat');

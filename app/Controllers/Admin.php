@@ -2,22 +2,60 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
 use App\Models\SponsorModel;
 use App\Models\auditoriumModel;
 use CodeIgniter\HTTP\Request;
 
 class Admin extends BaseController
 {
+    protected $user;
     protected $sponsor;
     protected $auditorium;
 
     public function __construct()
     {
+        $this->user = new UserModel();
         $this->sponsor = new SponsorModel();
         $this->auditorium = new auditoriumModel();
     }
 
     public function index()
+    {
+        $user = $this->user->findAll();
+        $audVid = $this->auditorium->findAll();
+        $sponsorData = $this->sponsor->getSponsor();
+        $data = [
+            'user' => $user,
+            'sponsorData' => $sponsorData,
+            'audvid' => $audVid
+        ];
+        // dd($sponsorData);
+        echo view('templates/header');
+        echo view('loginAdmin', $data);
+        echo view('templates/footer');
+    }
+
+    public function doLogin()
+    {
+        $email
+            = $this->request->getVar('email');
+        $password =
+            $this->request->getVar('password');
+        $status =
+            $this->request->getVar('status');
+        $userData = $this->user->where('password', $password)->where('status', $status)
+            ->findAll();
+        if ($userData == null) {
+            return redirect()->to('/admin');
+        } else {
+            $_SESSION['logonUser'] = 'aktif';
+            $_SESSION['username'] = $userData[0]['name'];
+            return redirect()->to('/Admin/adminDashboard',);
+        }
+    }
+
+    public function adminDashboard()
     {
 
         $audVid = $this->auditorium->findAll();
@@ -60,10 +98,10 @@ class Admin extends BaseController
     public function insertData()
     {
 
-        // $sponsorData = $this->sponsor->findAll();
-        // $data = [
-        //     'sponsorData' => $sponsorData,
-        // ];
+        $sponsorData = $this->sponsor->findAll();
+        $data = [
+            'sponsorData' => $sponsorData,
+        ];
         $vidCode = preg_replace(
             "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
             "//www.youtube.com/embed/$2?autoplay=1",
@@ -108,8 +146,8 @@ class Admin extends BaseController
             ]
         ])) {
             // $validation = \Config\Services::validation();
-            // return redirect()->to('/admin/admin-input')->withInput()->with('validation', $validation);
-            return redirect()->to('/admin/admin-input')->withInput();
+            // return redirect()->to('/Admin/adminDashboard')->withInput()->with('validation', $validation);
+            return redirect()->to('/Admin/adminDashboard')->withInput();
         }
         // Ambil Gambar
         $brosurUploaded = $this->request->getFile('sponsorBrosur');
@@ -147,16 +185,10 @@ class Admin extends BaseController
             => $namaBanner,
 
             'sponsor_logo'
-            => $namaLogo,
-
-            'sponsor_background'
-            => $this->request->getVar('sponsorBackground'),
-
-            'sponsor_nameDisplay'
-            => $this->request->getVar('sponsorNameDisp')
+            => $namaLogo
         ]);
         session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
-        return redirect()->to('/Admin');
+        return redirect()->to('/Admin/adminDashboard');
         // $checkData =  $this->sponsor->findAll();
     }
 
@@ -212,22 +244,7 @@ class Admin extends BaseController
         return redirect()->to('/admin');
     }
 
-    public function doLogin()
-    {
-        $email
-            = $this->request->getVar('email');
-        $password =
-            $this->request->getVar('password');
-        $userData = $this->user->where('email', $email)
-            ->where('password', $password)
-            ->findAll();
-        if ($userData == null) {
-            return redirect()->to('/admin');
-        } else {
-            $_SESSION['logonUser'] = 'aktif';
-            return redirect()->to('/adminDashboard', $userData);
-        }
-    }
+
 
     public function delete($name)
     {
@@ -238,7 +255,7 @@ class Admin extends BaseController
         unlink('assets/photos/sponsor/banner/' . $sponsorData['sponsor_banner']);
         session()->setFlashdata('pesan', 'Data berhasil dihapus.');
         $this->sponsor->delete($name);
-        return redirect()->to('/admin/index');
+        return redirect()->to('/Admin/adminDashboard');
     }
 
     public function edit($description)
@@ -252,9 +269,10 @@ class Admin extends BaseController
         echo view('templates/footer');
     }
 
-    public function update($name)
+    public function update($id)
     {
-        // / check judul -> ngambil data lama
+
+        // check judul -> ngambil data lama
         $sponsorLama = $this->sponsor->getSponsor($this->request->getVar('description'));
         if ($sponsorLama['name'] == $this->request->getVar('name')) {
             $ruleNama = 'required';
@@ -262,49 +280,47 @@ class Admin extends BaseController
             $ruleNama = 'required|is_unique[sponsor.name]';
         }
         if (!$this->validate([
-            'sponsorName' => [
-                'rules' => $ruleNama,
+            //     'sponsorName' => [
+            //         'rules' => $ruleNama,
+            //         'errors' => [
+            //             'required' => '{field} Nama Sponsor harus diisi',
+            //             'is_unique' => '{field} Sponsor tersebut sudah terdaftar'
+            //         ]
+            'sponsorBrosur' => [
+                'rules' => 'max_size[sponsorBrosur,1024]|is_image[sponsorBrosur]|mime_in[sponsorBrosur,image/jpg,image/jpeg,image/png]',
                 'errors' => [
-                    'required' => '{field} Nama Sponsor harus diisi',
-                    'is_unique' => '{field} Sponsor tersebut sudah terdaftar'
-                ],
-                'sponsorBrosur' => [
-                    'rules' => 'uploaded[sponsorBrosur]|max_size[sponsorBrosur,1024]|is_image[sponsorBrosur]|mime_in[sponsorBrosur,image/jpg,image/jpeg,image/png]',
-                    'errors' => [
-                        'uploaded' => 'Pilih gambar untuk Brosur ',
-                        'max_size' => 'Ukuran gambar terlalu besar',
-                        'is_image' => 'Pilih Gambar la',
-                        'mime_in'  => 'Pilih Gambar dong'
-                    ]
-                ],
-                'sponsorBanner' => [
-                    'rules' => 'uploaded[sponsorBrosur]|max_size[sponsorBrosur,1024]|is_image[sponsorBrosur]|mime_in[sponsorBrosur,image/jpg,image/jpeg,image/png]',
-                    'errors' => [
-                        'uploaded' => 'Pilih gambar untuk Brosur ',
-                        'max_size' => 'Ukuran gambar terlalu besar',
-                        'is_image' => 'Pilih Gambar la',
-                        'mime_in'  => 'Pilih Gambar dong'
-                    ]
-                ],
-                'sponsorLogo' => [
-                    'rules' => 'uploaded[sponsorBrosur]|max_size[sponsorBrosur,1024]|is_image[sponsorBrosur]|mime_in[sponsorBrosur,image/jpg,image/jpeg,image/png]',
-                    'errors' => [
-                        'uploaded' => 'Pilih gambar untuk Brosur ',
-                        'max_size' => 'Ukuran gambar terlalu besar',
-                        'is_image' => 'Pilih Gambar la',
-                        'mime_in'  => 'Pilih Gambar dong'
-                    ]
+                    'max_size' => 'Ukuran gambar terlalu besar',
+                    'is_image' => 'Pilih Gambar la',
+                    'mime_in'  => 'Pilih Gambar dong'
+                ]
+            ],
+            'sponsorBanner' => [
+                'rules' => 'max_size[sponsorBrosur,1024]|is_image[sponsorBrosur]|mime_in[sponsorBrosur,image/jpg,image/jpeg,image/png]',
+                'errors' => [
+                    'max_size' => 'Ukuran gambar terlalu besar',
+                    'is_image' => 'Pilih Gambar la',
+                    'mime_in'  => 'Pilih Gambar dong'
+                ]
+            ],
+            'sponsorLogo' => [
+                'rules' => 'max_size[sponsorBrosur,1024]|is_image[sponsorBrosur]|mime_in[sponsorBrosur,image/jpg,image/jpeg,image/png]',
+                'errors' => [
+                    'max_size' => 'Ukuran gambar terlalu besar',
+                    'is_image' => 'Pilih Gambar la',
+                    'mime_in'  => 'Pilih Gambar dong'
                 ]
             ]
+
         ])) {
-            //     $validation = \Config\Services::validation();
-            //     return redirect()->to('/admin/edit/' . $this->request->getVar('description'))->withInput()->with('validation', $validation);
+            //     //     $validation = \Config\Services::validation();
+            //     //     return redirect()->to('/admin/edit/' . $this->request->getVar('description'))->withInput()->with('validation', $validation);
             return redirect()->to('/admin/edit/' . $this->request->getVar('description'))->withInput();
         }
 
-        $fileBrosur = $this->request->getFile('brosur');
-        $fileLogo = $this->request->getFile('sponsor_logo');
-        $fileBanner = $this->request->getFile('sponsor_banner');
+        $fileBrosur = $this->request->getFile('sponsorBrosur');
+        $fileLogo = $this->request->getFile('sponsorLogo');
+        $fileBanner = $this->request->getFile('sponsorBanner');
+        $sponsor = $this->sponsor->find($id);
 
         // cek gambar, apakah tetap gambar brosur lama
         if ($fileBrosur->getError() == 4) {
@@ -324,18 +340,19 @@ class Admin extends BaseController
             unlink('assets/photos/sponsor/banner/' . $this->request->getVar('bannerLama'));
         }
 
-        // cek gambar, apakah tetap gambar logo lama
+        // // cek gambar, apakah tetap gambar logo lama
         if ($fileLogo->getError() == 4) {
             $namaLogo = $this->request->getVar('logoLama');
         } else {
             $namaLogo = $fileLogo->getName();
-            $fileLogo->move('assets/photos/sponsor/', $namaLogo);
+            $fileLogo->move('assets/photos/sponsor/logo/', $namaLogo);
             unlink('assets/photos/sponsor/logo/' . $this->request->getVar('logoLama'));
         }
 
         $description = url_title($this->request->getVar('sponsorName'), '-', true);
         // insert data Sponsor
-        $this->sponsor->insert([
+        $this->sponsor->save([
+            'id' => $id,
             'name' => $this->request->getVar('sponsorName'),
 
             'description'
@@ -347,6 +364,15 @@ class Admin extends BaseController
             'video'
             => $this->request->getVar('sponsorVideo'),
 
+            // 'brosur'
+            // => $this->request->getVar('sponsorBrosur'),
+
+            // 'sponsor_banner'
+            // => $this->request->getVar('sponsorBanner'),
+
+            // 'sponsor_logo'
+            // => $this->request->getVar('sponsorLogo')
+
             'brosur'
             => $namaBrosur,
 
@@ -357,7 +383,7 @@ class Admin extends BaseController
             => $namaLogo
         ]);
         session()->setFlashdata('pesan', 'Data Berhasil diubah.');
-        return redirect()->to('/Admin');
+        return redirect()->to('/Admin/adminDashboard');
         // $checkData =  $this->sponsor->findAll();
     }
 

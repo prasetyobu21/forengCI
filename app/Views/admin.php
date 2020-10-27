@@ -6,7 +6,7 @@
             <div class="col-8">
                 <h3 class='mt-3 mb-3'>Input data sponsor</h3>
 
-                <form action="/admin/index" method="POST" enctype="multipart/form-data">
+                <form action="/Admin/insertData" method="POST" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
                     <!-- Nama -->
                     <div class="input-group mb-3">
@@ -80,8 +80,8 @@
                         </div>
                     </div>
                     <div class="custom-file">
-                        <button type="submit" formaction="/admin/boothCheck" class="btn btn-success">Check</button>
-                        <button type="submit" formaction="/admin/insertData" class="btn btn-primary">Input</button>
+                        <button type="submit" formaction="/Admin/boothCheck" class="btn btn-success">Check</button>
+                        <button type="submit" class="btn btn-primary">Input</button>
                     </div>
                 </form>
             </div>

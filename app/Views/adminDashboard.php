@@ -24,7 +24,7 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nama</th>
-              <th scope="col">Phone Number</th>
+              <th scope="col">No.Telepon</th>
               <th scope="col">Sponsor Logo</th>
               <th scope="col">Aksi</th>
             </tr>
@@ -36,16 +36,16 @@
                 <th scope="row"><?= $i++; ?></th>
                 <td><?= $s['name']; ?></td>
                 <td><?= $s['phoneNumber']; ?></td>
-                <td><img class="logo" src="/assets/photos/sponsor/logo/<?= $s['sponsor_logo']; ?>">
+                <td><img class="logo img-thumbnail" src="/assets/photos/sponsor/logo/<?= $s['sponsor_logo']; ?>">
                 </td>
                 <td>
-                  <a href="/adminDashboard/<?= $s['description']; ?>" class="btn btn-primary">Detail</a>
+                  <a href="/admin/adminDashboard/<?= $s['description']; ?>" class="btn btn-primary">Detail</a>
                 </td>
               </tr>
             <?php endforeach; ?>
           </tbody>
         </table>
-        <button type="submit" onClick="window.location.href='/admin/admin-input'" class="btn btn-primary">Add New</button>
+        <button type="submit" onClick="window.location.href='/Admin/input'" class="btn btn-primary">Add New</button>
       </div>
     </div>
   </div>

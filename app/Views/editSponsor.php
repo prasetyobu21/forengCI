@@ -6,9 +6,10 @@
             <div class="col-8">
                 <h3 class='mt-3 mb-3'>Ubah data sponsor</h3>
 
-                <form action="/admin/update/<?= $sponsor['name']; ?>" method="POST" enctype="multipart/form-data">
+                <form action="/Admin/update/<?= $sponsor['id']; ?>" method="POST" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="description" value="<?= $sponsor['description']; ?>">
+                    <input type="hidden" name="videoLama" value="<?= $sponsor['video']; ?>">
                     <input type="hidden" name="brosurLama" value="<?= $sponsor['brosur']; ?>">
                     <input type="hidden" name="bannerLama" value="<?= $sponsor['sponsor_banner']; ?>">
                     <input type="hidden" name="logoLama" value="<?= $sponsor['sponsor_logo']; ?>">
@@ -18,7 +19,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
                         </div>
-                        <input type="text" name="sponsorName" class="form-control <?= ($validation->hasError('sponsorName')) ? 'is-invalid' : ''; ?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<?= (old('name')) ? old('name') : $sponsor['name'] ?>">
+                        <input type="text" name="sponsorName" class="form-control <?= ($validation->hasError('sponsorName')) ? 'is-invalid' : ''; ?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="<?= $sponsor['name']; ?>">
                         <div class=" invalid-feedback"><?= $validation->getError('sponsorName'); ?>
                         </div>
                     </div>

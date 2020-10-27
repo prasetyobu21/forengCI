@@ -10,6 +10,7 @@ class SponsorModel extends Model
     protected $primaryKey = 'name';
 
     protected $allowedFields = [
+        'id',
         'name',
         'description',
         'phoneNumber',

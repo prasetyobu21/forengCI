@@ -33,7 +33,7 @@
                                 </form>
                                 <div>
                                     <!-- belum bisa link balik ke /adminDashboard // Error there is no controller/method AdminDashboard::index -->
-                                    <a href="/admin/index">Kembali ke Dashboard Admin</a>
+                                    <a href="/Admin/adminDashboard">Kembali ke Dashboard Admin</a>
                                 </div>
                             </span>
                         </div>
