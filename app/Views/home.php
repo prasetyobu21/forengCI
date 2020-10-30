@@ -20,8 +20,8 @@
                         </svg>Lobby <span class="sr-only">(current)</span></a>
 
                     <a id='navConnectionArea' class="nav-link active">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-menu-button-wide-fill"
-                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-menu-button-wide-fill" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M14 7H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM2 6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H2z" />
                             <path fill-rule="evenodd"
@@ -29,44 +29,43 @@
                         </svg>Connection Area</a>
 
                     <a id='navExhibition' class="nav-link active">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid" fill="currentColor"
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-grid" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
                         </svg>Exhibition</a>
 
-                    <!-- <a id='navUnknown' class="nav-link active">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor"
+                    <a id='navUnknown' class="nav-link active">
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                        </svg>Data</a> -->
+                        </svg>Data</a>
 
                     <a id='navAuditorium' class="nav-link active">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tv-fill" fill="currentColor"
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-tv-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM2 2h12s2 0 2 2v6s0 2-2 2H2s-2 0-2-2V4s0-2 2-2z" />
                         </svg>Auditorium</a>
 
-                    <a id='navRC' href="https://foreng.wika.co.id/news" target="__blank" class="nav-link active"
-                        style="width: fit-content;">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cloud-arrow-down-fill"
-                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <a id='navRC' href="https://foreng.wika.co.id/news" target="__blank" class="nav-link active">
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-cloud-arrow-down-fill" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
                         </svg>Resource Center</a>
 
                     <a id='navAbout' href="https://foreng.wika.co.id/about" target="__blank" class="nav-link active">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle-fill"
-                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-info-circle-fill" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                         </svg>About</a>
 
-                    <a id='navEF' class="nav-link active" style="width: fit-content;">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square"
-                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <a id='navEF' class="nav-link active">
+                        <svg height="2vh" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                             <path fill-rule="evenodd"
@@ -78,8 +77,9 @@
             </div>
         </nav>
     </div>
+
     <!-- Login with email -->
-    <form id="loginwithemail" autocomplete="off" action="/pages/login" method="post">
+    <form id="loginEmail" class="" autocomplete="off" action="/pages/loginEmail" method="post">
         <div id="registration" class="wrapper">
             <div id='bgBlur' class="wrapper-bg"></div>
             <div id='loginCard' class="loginPanel">
@@ -88,10 +88,28 @@
                 <p class="user-select-none">E-mail</p>
                 <input id="username" autocomplete="off" type="text" name="email" placeholder="Enter E-mail">
                 <p class="user-select-none">ID Peserta</p>
-                <input id="password" autocomplete="off" type="text" name="password" placeholder="Enter ID Peserta">
+                <input id="password" autocomplete="off" type="text" name="idPeserta" placeholder="Enter ID Peserta">
                 <input type="submit" autocomplete="off" name="login" value="Login">
                 <p style="margin-top: 0%;"></p>
-                <a id="phonenumberbutton" class="sign up" href="#">Login with Phone Number</a>
+                <a id="loginPhoneButton" class="signup">Login with phone number</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Login with phone number -->
+    <form id="loginPhone" class="d-none" autocomplete="off" action="/pages/loginPhone" method="post">
+        <div id="registration" class="wrapper">
+            <div id='bgBlur' class="wrapper-bg"></div>
+            <div id='loginCard' class="loginPanel">
+                <img src="/assets/photos/forenglogo.png" class="foto">
+                <h1 class="user-select-none">Welcome</h1>
+                <p class="user-select-none">Phone Number</p>
+                <input id="username" autocomplete="off" type="text" name="phoneNum" placeholder="Enter Phone Number">
+                <p class="user-select-none">ID Peserta</p>
+                <input id="password" autocomplete="off" type="text" name="idPeserta" placeholder="Enter ID Peserta">
+                <input type="submit" autocomplete="off" name="login" value="Login">
+                <p style="margin-top: 0%;"></p>
+                <a id="loginEmailButton" class="signup">Login with email</a>
             </div>
         </div>
     </form>
@@ -145,9 +163,8 @@
         <div class="wrapper-bg-auditorium">
             <!-- <div class="container"> -->
             <div class="position embed-responsive embed-responsive-16by9 centered-thing">
-                <iframe id='auditoriumVideo' src="<?= $av['video']; ?>"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe class="ifa" id='auditoriumVideo' src="<?php echo $av['video'] ?>"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <!-- </div> -->
         </div>
@@ -161,7 +178,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col" style="margin-top: 14%; margin-left: 13%">
-                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
+                        <a style="opacity: 0%; font-size: 10vh;" href="/boothk/wikaRealty">Hi!</a>
                     </div>
                     <div class="col" style="margin-top: 14%; margin-left: 2%">
                         <a style="opacity: 0%; font-size: 10vh;" href="/boothk">Hi!</a>
@@ -186,7 +203,7 @@
                     </div>
                     <div class="row">
                         <div class="col" style="margin-top: 0%; margin-left: 10%; margin-right: -10%">
-                            <a style="opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
+                            <a style="opacity: 0%; font-size: 7.45vw;" href="/boothb/wikaRealty">Hi!</a>
                         </div>
                         <div class="col" style="margin-top: 0%; margin-left: 7%; margin-right: -10%">
                             <a style=" opacity: 0%; font-size: 7.45vw;" href="/boothb">Hi!</a>
@@ -256,9 +273,25 @@
                     </div>
                 </div>
                 <div class="userChat">
-                    <input id="chatMessage" class="col-9" type="text">
-                    <a id="sendChat" href="#" class="col-3">
+                    <input id="chatMessage" class="col-8" type="text">
+                    <a id="sendChat" href="#" class="col-2">
                         Send
+                    </a>
+                    <a href="#" id="scroll-button" class="col-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#ffffff">
+                                    <path
+                                        d="M86,100.84217l-27.38383,-27.38383c-2.967,-2.967 -7.783,-2.967 -10.75,0v0c-2.967,2.967 -2.967,7.783 0,10.75l33.067,33.067c2.80217,2.80217 7.33867,2.80217 10.13367,0l33.067,-33.067c2.967,-2.967 2.967,-7.783 0,-10.75v0c-2.967,-2.967 -7.783,-2.967 -10.75,0z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -319,19 +352,39 @@
     <?php if (isset($_SESSION['logonUser'])) {
         if ($_SESSION['logonUser'] == 'aktif') { ?>
     <script>
-    $('#bgBlur').css('filter', 'none').fadeIn(1000);
-    $('#loginCard').fadeOut(600);
-    $('#nav').fadeIn(600);
+    $(document).ready(function() {
+        if (window.matchMedia("(max-width: 1080px)").matches) {
+            // The viewport is less than 768 pixels wide
+            alert("Untuk experience maksimal, gunakan laptop atau komputer.");
+            $('#bgBlur').css('filter', 'none').fadeIn(1000);
+            $('#loginCard').fadeOut(600);
+            $('#nav').fadeIn(600);
 
-    $('#registration').fadeOut();
-    $('#lobby').fadeIn();
-    $('#auditorium').fadeOut();
-    $('#about').fadeOut();
-    $('#eventFeedback').fadeOut();
-    $('#exhibition').fadeOut();
-    $('#connectionArea').fadeOut();
-    $('#resourceCenter').fadeOut();
-    $('#unknown').fadeOut();
+            $('#registration').fadeOut();
+            $('#lobby').fadeOut();
+            $('#auditorium').fadeIn();
+            $('#about').fadeOut();
+            $('#eventFeedback').fadeOut();
+            $('#exhibition').fadeOut();
+            $('#connectionArea').fadeOut();
+            $('#resourceCenter').fadeOut();
+            $('#unknown').fadeOut();
+        } else {
+            $('#bgBlur').css('filter', 'none').fadeIn(1000);
+            $('#loginCard').fadeOut(600);
+            $('#nav').fadeIn(600);
+
+            $('#registration').fadeOut();
+            $('#lobby').fadeIn();
+            $('#auditorium').fadeOut();
+            $('#about').fadeOut();
+            $('#eventFeedback').fadeOut();
+            $('#exhibition').fadeOut();
+            $('#connectionArea').fadeOut();
+            $('#resourceCenter').fadeOut();
+            $('#unknown').fadeOut();
+        }
+    });
     </script>
     <?php }
     } ?>
@@ -341,21 +394,33 @@
         if ($_SESSION['state'] == 'exhibition') {
     ?>
     <script>
-    $('#auditorium').fadeOut();
-    $('#about').fadeOut();
-    $('#eventFeedback').fadeOut();
-    $('#exhibition').fadeIn();
-    $('#connectionArea').fadeOut();
-    $('#resourceCenter').fadeOut();
-    $('#lobby').fadeOut();
-    $('#registration').fadeOut();
-    $('#unknown').fadeOut();
+    $(document).ready(function() {
+        $('#auditorium').fadeOut();
+        $('#about').fadeOut();
+        $('#eventFeedback').fadeOut();
+        $('#exhibition').fadeIn();
+        $('#connectionArea').fadeOut();
+        $('#resourceCenter').fadeOut();
+        $('#lobby').fadeOut();
+        $('#registration').fadeOut();
+        $('#unknown').fadeOut();
+    })
     </script>
     <?php
+            $_SESSION['state'] == '';
         }
     } ?>
 
     <script>
+    $(document).ready(function() {
+        if (window.matchMedia("(max-width: 1080px)").matches) {
+            // The viewport is less than 768 pixels wide
+            alert("Untuk experience maksimal, gunakan laptop atau komputer.");
+        } else {
+            // The viewport is at least 768 pixels wide
+            // alert("This is a tablet or desktop.");
+        }
+    });
     $(document).ready(function() {
         $(document).bind("contextmenu", function(e) {
             return false;
@@ -381,7 +446,7 @@
                         // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
                         var height = 0;
                         height += parseInt($('#chat_body')[0].scrollHeight);
-                        $('div').animate({
+                        $('.wrapper-bg-connectionArea div').animate({
                             scrollTop: height
                         })
                         $('#chatMessage').focus();
@@ -407,31 +472,13 @@
                     // $('#chat_body').scrollTop($('#chat_body')[0].scrollHeight);
                     var height = 0;
                     height += parseInt($('#chat_body')[0].scrollHeight);
-                    $('div').animate({
+                    $('.wrapper-bg-connectionArea div').animate({
                         scrollTop: height
                     })
                     $('#chatMessage').focus();
                 }
             })
         });
-
-
-        // Scroll to bottom of the chat
-        // var height = 0;
-        // $('#chat_body .chatMessage').each(function(i, value) {
-        //     height += parseInt($(this).height());
-        // });
-
-        // height += '';
-
-        // setInterval(function() {
-        //     console.log(height);
-        //     $('div').animate({
-        //         scrollTop: height
-        //     });
-        // }, 5000);
-
-        //------------------------------------------------
 
         setInterval(function() {
             loadChat();
@@ -462,20 +509,45 @@
                     }
                     $('#chat_body').html(html);
                     var height = 0;
-                    height += parseInt($('#chat_body')[0].scrollHeight);
-                    console.log($('div').scrollTop());
-                    $('.wrapper-bg-connectionArea div').animate({
-                        scrollTop: height
-                    })
+                    // height += parseInt($('#chat_body')[0].scrollHeight);
+                    // console.log($('div').scrollTop());
+                    // $('.wrapper-bg-connectionArea div').animate({
+                    //     scrollTop: height
+                    // })
 
                 }
             })
         }
+
+        $("#scroll-button").click(function() {
+            var height = 0;
+            height += parseInt($('#chat_body')[0].scrollHeight);
+            console.log($('div').scrollTop());
+            $('.wrapper-bg-connectionArea div').animate({
+                scrollTop: height
+            })
+        })
     })
 
 
-    $("#navAuditorium").click(function() {
-        $('#auditoriumVideo')[0].src += "&autoplay=1";
+    // $("#playvid").click(function(ev) {
+    //     $('#auditoriumVideo')[0].src += "&autoplay=1";
+    //     ev.preventDefault();
+    // })
+
+    $("#loginPhoneButton").click(function() {
+        $("#loginEmail").addClass("d-none");
+        $("#loginPhone").removeClass("d-none")
+    })
+
+    $("#loginEmailButton").click(function() {
+        $("#loginPhone").addClass("d-none");
+        $("#loginEmail").removeClass("d-none")
+    })
+
+    $("#navAuditorium").click(function(ev) {
+        // $('#auditoriumVideo')[0].src += "&autoplay=1";
+        // ev.preventDefault();
         // ev.preventDefault();
         $('#auditorium').fadeIn();
         $('#about').fadeOut();
